@@ -1,5 +1,10 @@
 # Getting Started with Create React App
 
+## HRMS - UML Component Diagram
+
+![HRMS-uml](https://user-images.githubusercontent.com/79403885/121102897-5ddca680-c807-11eb-9e88-ad110b01a412.jpg)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

@@ -1,3 +1,11 @@
 .App {
   text-align: center;
 }
+.ui.main.container
+.App{
+  text-align : center ; 
+}
+
+.ui.ui.main.container{
+  margin-top: 3em ;
+}

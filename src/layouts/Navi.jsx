@@ -8,25 +8,19 @@ export default function Navi() {
             <Menu inverted size='small'>
 
                 <Container>
-
                     <Menu.Item
                         name='home'
-
                     />
                     <Menu.Item
                         name='messages'
-
                     />
                     <Menu.Menu position='right'>
-                        
                         <Singup/>
-                       
                         <Menu.Item>
                         <Login/>
                         </Menu.Item>
                     </Menu.Menu>
                 </Container>
-
             </Menu>
         </div>
     )

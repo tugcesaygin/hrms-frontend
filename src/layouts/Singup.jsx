@@ -5,9 +5,8 @@ export default function Signup() {
         <div>
             <Dropdown item text='Sign Up'>
                 <Dropdown.Menu>
-                    <Dropdown.Item>English</Dropdown.Item>
-                    <Dropdown.Item>Russian</Dropdown.Item>
-                    <Dropdown.Item>Spanish</Dropdown.Item>
+                 
+                   
                 </Dropdown.Menu>
             </Dropdown>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import Navi from './Navi'
+
 import JobPostions from '../pages/Users/Employers'
 import Employers from '../pages/Users/JobSeekers'
 import JobSeekers from '../pages/JobPositions/JobPositions'

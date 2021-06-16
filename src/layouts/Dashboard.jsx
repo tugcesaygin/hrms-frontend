@@ -1,20 +1,24 @@
 import React from 'react'
 
-import JobPostions from '../pages/Users/Employers'
-import Employers from '../pages/Users/JobSeekers'
-import JobSeekers from '../pages/JobPositions/JobPositions'
-import SystemEmployee from '../pages/Users/SystemEmployee'
 import Sidebar from './Sidebar'
+import { Grid } from "semantic-ui-react"
+import Section from './Section'
+
 
 export default function Dashboard() {
     return (
-       <div>
+        <div>
+            <Grid>
+                <Grid.Row>
+                    <Grid.Column width={4}>
+                        <Sidebar />
+                    </Grid.Column>
+                    <Grid.Column width={12}>
+                        <Section />
+                    </Grid.Column>
+                </Grid.Row>
+            </Grid>
 
-        <Sidebar/>
-        <JobPostions/>
-        <Employers/>
-        <JobSeekers/>
-        <SystemEmployee/>
-       </div>
+        </div>
     )
 }

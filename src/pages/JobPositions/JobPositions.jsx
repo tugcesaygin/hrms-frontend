@@ -32,11 +32,11 @@ export default function JobPositions() {
                             <><tr>
 
                                 </tr><tr>
-
+                                   {jobpositions.jobTitle }
                                 </tr><tr>
-
+                                   {jobpositions.jobPositionsId }
                                 </tr><tr>
-
+                                  {jobpositions.userId }
                                 </tr><tr>
 
                              </tr></>

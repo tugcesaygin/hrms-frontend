@@ -5,9 +5,9 @@ export default function Employers() {
 
     const [employers, setEmployers] = useState([])
 
-    useEffect(()=>{
-       let employersService = new EmployersService()
-       employersService.getEmployers().then(result=>setEmployers(result.data.data))
+    useEffect(() => {
+        let employersService = new EmployersService()
+        employersService.getEmployers().then(result => setEmployers(result.data.data))
     })
 
 
@@ -29,10 +29,16 @@ export default function Employers() {
                         employers.map(employers => (
                             <><tr>
 
+                            </tr><tr>
+                                    {employers.companyName}
                                 </tr><tr>
-
+                                    {employers.email}
                                 </tr><tr>
-
+                                    {employers.id}
+                                </tr><tr>
+                                    {employers.JobAdvertisement}
+                                </tr><tr>
+                               
                                 </tr></>
                         ))
                     }

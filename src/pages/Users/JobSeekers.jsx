@@ -1,59 +1,70 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+import JobSeekersService from "../../services/jobSeekersService";
 
 export default function JobSeekers() {
+
+    const [jobseekers, setjobSeekers] = useState([])
+
+    useEffect(() => {
+        let jobSeekersService = new JobSeekersService()
+        jobSeekersService.getJobSeekers().then(result => setjobSeekers(result.data.data))
+
+
+    })
+
+
     return (
         <div>
             <table class="ui celled table">
                 <thead>
                     <tr>
-                        <th>Candidates</th>
-                        <th>Status</th>
-                        <th>Edit</th>
+                        <th>Name</th>
+                        <th>Last Name</th>
+                        <th>E-Mail</th>
+                        <th>Birthday</th>
+
                     </tr>
                 </thead>
+
+
                 <tbody>
-                    <tr>
-                        <td>John</td>
-                        <td>No Action</td>
-                        <td class="selectable">
-                            <a href="#">Edit</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Jamie</td>
-                        <td>Approved</td>
-                        <td class="selectable">
-                            <a href="#">Edit</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Jill</td>
-                        <td>Denied</td>
-                        <td class="selectable">
-                            <a href="#">Edit</a>
-                        </td>
-                    </tr>
-                    <tr class="warning">
-                        <td>John</td>
-                        <td>No Action</td>
-                        <td class="selectable warning">
-                            <a href="#">Requires change</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Jamie</td>
-                        <td class="positive">Approved</td>
-                        <td class="selectable positive">
-                            <a href="#">Approve</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Jill</td>
-                        <td class="negative">Denied</td>
-                        <td class="selectable negative">
-                            <a href="#">Remove</a>
-                        </td>
-                    </tr>
+                    {
+
+                        jobseekers.map(jobseekers => (
+                            <><tr>
+                                <td>John</td>
+                                <td>Jill</td>
+                                <td>Jill</td>
+
+                            </tr><tr>
+                                    <td>Jamie</td>
+                                    <td>Jill</td>
+                                    <td>Jill</td>
+                                </tr><tr>
+                                    <td>Jill</td>
+                                    <td>Jill</td>
+                                    <td>Jill</td>
+                                </tr><tr class="warning">
+                                    <td>John</td>
+                                    <td>Jill</td>
+                                    <td>Jill</td>
+                                </tr><tr>
+                                    <td>Jamie</td>
+                                    <td>Jill</td>
+                                    <td>Jill</td>
+
+
+                                </tr><tr>
+                                    <td>Jill</td>
+                                    <td>Jill</td>
+                                    <td>Jill</td>
+
+
+                                </tr></>
+                        ))
+
+
+                    }
                 </tbody>
             </table>
         </div>

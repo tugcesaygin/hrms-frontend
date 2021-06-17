@@ -1,36 +1,41 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+import EmployersService from "../../services/employersService";
 
 export default function Employers() {
+
+    const [employers, setEmployers] = useState([])
+
+    useEffect(()=>{
+       let employersService = new EmployersService()
+       employersService.getEmployers().then(result=>setEmployers(result.data.data))
+    })
+
+
     return (
         <div>
             <table class="ui single line table">
                 <thead>
                     <tr>
                         <th>Employers</th>
-                        <th>Registration Date</th>
-                        <th>E-mail address</th>
-                        <th>Premium Plan</th>
+                        <th>Company Name</th>
+                        <th>Tel No</th>
+                        <th>Web Site</th>
                     </tr>
                 </thead>
+
+
                 <tbody>
-                    <tr>
-                        <td>John Lilki</td>
-                        <td>September 14, 2013</td>
-                        <td>jhlilk22@yahoo.com</td>
-                        <td>No</td>
-                    </tr>
-                    <tr>
-                        <td>Jamie Harington</td>
-                        <td>January 11, 2014</td>
-                        <td>jamieharingonton@yahoo.com</td>
-                        <td>Yes</td>
-                    </tr>
-                    <tr>
-                        <td>Jill Lewis</td>
-                        <td>May 11, 2014</td>
-                        <td>jilsewris22@yahoo.com</td>
-                        <td>Yes</td>
-                    </tr>
+                    {
+                        employers.map(employers => (
+                            <><tr>
+
+                                </tr><tr>
+
+                                </tr><tr>
+
+                                </tr></>
+                        ))
+                    }
                 </tbody>
             </table>
         </div>

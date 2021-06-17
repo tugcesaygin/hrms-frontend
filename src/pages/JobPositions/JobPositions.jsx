@@ -1,32 +1,48 @@
-import React from 'react'
+
+import React, { useState, useEffect } from "react";
+import JobPositionsService from "../../services/jobPositionsService";
 
 export default function JobPositions() {
+
+    const [jobpositions, setJobPositions] = useState([])
+
+    useEffect(()=>{
+        let jobPositionsService = new JobPositionsService()
+        jobPositionsService.getJobPositions().then(result=>setJobPositions(result.data.data))
+    } )
+
+
     return (
         <div>
             <table class="ui inverted table">
                 <thead>
                     <tr>
                         <th>Job Positions</th>
-                        <th>Status</th>
-                        <th>Notes</th>
+                        <th>Job Titles</th>
+                        <th></th>
+                        <th>Web Site</th>
+                        <th>City</th>
+
+
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>John</td>
-                        <td>Approved</td>
-                        <td>None</td>
-                    </tr>
-                    <tr>
-                        <td>Jamie</td>
-                        <td>Approved</td>
-                        <td>Requires call</td>
-                    </tr>
-                    <tr>
-                        <td>Jill</td>
-                        <td>Denied</td>
-                        <td>None</td>
-                    </tr>
+                    {
+                        jobpositions.map(jobpositions => (
+                            <><tr>
+
+                                </tr><tr>
+
+                                </tr><tr>
+
+                                </tr><tr>
+
+                                </tr><tr>
+
+                             </tr></>
+                        ))
+                    }
+
                 </tbody>
                 <tfoot>
                     <tr><th>3 People</th>
